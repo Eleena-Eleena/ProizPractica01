@@ -1,0 +1,81 @@
+﻿<Page x:Class="Taro.Pages.Lessons"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Taro.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Lessons">
+
+    <Grid x:Name="GridName">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+   
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <RadioButton Content="Общие данные" Style="{StaticResource MenuButton}" Click="RadioButton_Click"/>
+            <RadioButton Content="Старшие арканы" Style="{StaticResource MenuButton}" Click="RadioButton_Click_1"/>
+            <RadioButton Content="Младшие арканы" Style="{StaticResource MenuButton}" Click="RadioButton_Click_2"/>
+        </StackPanel>
+        <Grid Grid.Row="1"  Background="#f9e6b4">
+            <StackPanel x:Name="SPIntro"  HorizontalAlignment="Center" Visibility="Hidden">
+                <StackPanel Orientation="Horizontal">
+                    <Button Style="{DynamicResource bnt}" Content="Общая информация" Margin="0,70,20,0" Height="40" Width="150" Name="info" Click="info_Click"/>
+                    <Button Style="{DynamicResource bnt}" Content="Структура" Margin="20,70,0,0"  Height="40" Width="150" Name="Structure" Click="Structure_Click"/>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel x:Name="SPSA"  HorizontalAlignment="Center" Visibility="Hidden">
+                <StackPanel Orientation="Horizontal" Margin="10">
+                    <Image Width="150" MouseLeftButtonDown="SA0_MouseLeftButtonDown" Source="/Resources/Photo/SA/00.png" x:Name="SA0" Cursor="Hand"/>
+                    <Image Width="150" MouseLeftButtonDown="SA1_MouseLeftButtonDown" Source="/Resources/Photo/SA/01.png" x:Name="SA1"  Cursor="Hand"/>
+                    <Image Width="150" MouseLeftButtonDown="SA2_MouseLeftButtonDown" Source="/Resources/Photo/SA/02.png" x:Name="SA2"  Cursor="Hand"/>
+                    <Image Width="150" MouseLeftButtonDown="SA3_MouseLeftButtonDown" Source="/Resources/Photo/SA/03.png" x:Name="SA3"  Cursor="Hand"/>
+                    <Image Width="150" MouseLeftButtonDown="SA4_MouseLeftButtonDown" Source="/Resources/Photo/SA/04.png" x:Name="SA4"  Cursor="Hand"/>
+                    <Image Width="150" MouseLeftButtonDown="SA5_MouseLeftButtonDown" Source="/Resources/Photo/SA/05.png" x:Name="SA5"  Cursor="Hand"/>
+                    <Image Width="150"  MouseLeftButtonDown="SA6_MouseLeftButtonDown" Source="/Resources/Photo/SA/06.png" x:Name="SA6"  Cursor="Hand"/>
+                    <Image Width="150"  MouseLeftButtonDown="SA7_MouseLeftButtonDown" Source="/Resources/Photo/SA/07.png" x:Name="SA7"  Cursor="Hand"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"  Margin="10">
+                    <Image Width="150"  MouseLeftButtonDown="SA8_MouseLeftButtonDown" Source="/Resources/Photo/SA/08.png" x:Name="SA8"  Cursor="Hand"/>
+                    <Image Width="150"  MouseLeftButtonDown="SA9_MouseLeftButtonDown" Source="/Resources/Photo/SA/09.png" x:Name="SA9"  Cursor="Hand"/>
+                    <Image Width="150"  MouseLeftButtonDown="SA10_MouseLeftButtonDown" Source="/Resources/Photo/SA/10.png" x:Name="SA10"  Cursor="Hand"/>
+                    <Image Width="150"  MouseLeftButtonDown="SA11_MouseLeftButtonDown" Source="/Resources/Photo/SA/11.png" x:Name="SA11"  Cursor="Hand"/>
+                    <Image Width="150" MouseLeftButtonDown="SA12_MouseLeftButtonDown" Source="/Resources/Photo/SA/12.png" x:Name="SA12"  Cursor="Hand"/>
+                    <Image Width="150" MouseLeftButtonDown="SA13_MouseLeftButtonDown" Source="/Resources/Photo/SA/13.png" x:Name="SA13"  Cursor="Hand"/>
+                    <Image Width="150" MouseLeftButtonDown="SA14_MouseLeftButtonDown" Source="/Resources/Photo/SA/14.png" x:Name="SA14"  Cursor="Hand"/>
+                    <Image Width="150" MouseLeftButtonDown="SA15_MouseLeftButtonDown" Source="/Resources/Photo/SA/15.png" x:Name="SA15"  Cursor="Hand"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"  Margin="10">
+                    <Image Width="150" MouseLeftButtonDown="SA16_MouseLeftButtonDown" Source="/Resources/Photo/SA/16.png" x:Name="SA16"  Cursor="Hand"/>
+                    <Image Width="150" MouseLeftButtonDown="SA17_MouseLeftButtonDown" Source="/Resources/Photo/SA/17.png" x:Name="SA17"  Cursor="Hand"/>
+                    <Image Width="150" MouseLeftButtonDown="SA18_MouseLeftButtonDown" Source="/Resources/Photo/SA/18.png" x:Name="SA18"  Cursor="Hand"/>
+                    <Image Width="150" MouseLeftButtonDown="SA19_MouseLeftButtonDown" Source="/Resources/Photo/SA/19.png" x:Name="SA19"  Cursor="Hand"/>
+                    <Image Width="150" MouseLeftButtonDown="SA20_MouseLeftButtonDown" Source="/Resources/Photo/SA/20.png" x:Name="SA20"  Cursor="Hand"/>
+                    <Image Width="150" MouseLeftButtonDown="SA21_MouseLeftButtonDown" Source="/Resources/Photo/SA/21.png" x:Name="SA21"  Cursor="Hand"/>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel x:Name="SPMA"  HorizontalAlignment="Center" Visibility="Collapsed">
+                <StackPanel Orientation="Horizontal">
+                    <Button Style="{DynamicResource bnt}" Content="Жезлы" Margin="0,70,20,0" Height="40" Width="150"  Name="btnBatons" Click="btnBatons_Click" />
+                    <Button  Style="{DynamicResource bnt}" Content="Придворные карты. Жезлы" Margin="20,70,0,0" Height="40" Width="170"  Name="btnPredBatons" Click="btnPredBatons_Click" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button Style="{DynamicResource bnt}" Content="Кубки" Margin="0,70,20,0"  Height="40" Width="150"  Name="btnCoupes" Click="btnCoupes_Click"/>
+                    <Button Style="{DynamicResource bnt}" Content="Придворные карты. Кубки" Margin="20,70,0,0" Height="40" Width="170"   Name="btnPredCoupes" Click="btnPredCoupes_Click"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button  Style="{DynamicResource bnt}" Content="Мечи" Margin="0,70,20,0"  Height="40" Width="150"  Name="btnEpees" Click="btnEpees_Click"/>
+                    <Button Style="{DynamicResource bnt}" Content="Придворные карты. Мечи" Margin="20,70,0,0"  Height="40" Width="170"   Name="btnPredEpees" Click="btnPredEpees_Click"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button Style="{DynamicResource bnt}" Content="Пентакли" Margin="0,70,20,0"  Height="40" Width="150"  Name="btnDeniers" Click="btnDeniers_Click"/>
+                    <Button Style="{DynamicResource bnt}" Content="Придворные карты. Пентакли" Margin="20,70,0,0"  Height="40" Width="170"  Name="btnPredDeniers" Click="btnPredDeniers_Click"/>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+        
+    </Grid>
+</Page>
